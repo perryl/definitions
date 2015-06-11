@@ -1,0 +1,6 @@
+kind: chunk
+name: libfaketime
+build-commands:
+- CC=gcc make
+install-commands:
+- make install PREFIX="$PREFIX"
