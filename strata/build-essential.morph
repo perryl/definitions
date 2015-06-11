@@ -301,23 +301,6 @@ chunks:
   - glibc
   - zlib
 
-- name: busybox
-  morph: strata/build-essential/busybox.morph
-  repo: upstream:busybox
-  ref: 1ecfe811fe2f70380170ef7d820e8150054e88ca
-  unpetrify-ref: 1_23_1
-  build-depends:
-  - stage2-binutils
-  - stage2-busybox
-  - stage2-glibc
-  - stage2-fhs-dirs
-  - stage2-gawk
-  - stage2-gcc
-  - stage2-linux-api-headers
-  - stage2-make
-  - stage2-reset-specs
-  - glibc
-
 - name: gawk
   morph: strata/build-essential/gawk.morph
   repo: upstream:gawk
@@ -408,3 +391,35 @@ chunks:
   - stage2-reset-specs
   - glibc
   - zlib
+
+- name: libfaketime
+  morph: strata/build-essential/libfaketime.morph
+  repo: https://github.com/wolfcw/libfaketime.git
+  ref: v0.9.6
+  unpetrify-ref: v0.9.6
+  build-depends:
+  - stage2-binutils
+  - stage2-busybox
+  - glibc
+  - stage2-fhs-dirs
+  - gawk
+  - gcc
+  - linux-api-headers
+  - make
+
+- name: busybox
+  morph: strata/build-essential/busybox.morph
+  repo: upstream:busybox
+  ref: 1ecfe811fe2f70380170ef7d820e8150054e88ca
+  unpetrify-ref: 1_23_1
+  build-depends:
+  - stage2-busybox
+  - stage2-binutils
+  - glibc
+  - stage2-fhs-dirs
+  - gawk
+  - gcc
+  - linux-api-headers
+  - make
+  - libfaketime
+  - glibc
