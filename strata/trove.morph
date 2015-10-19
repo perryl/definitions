@@ -70,9 +70,9 @@ chunks:
   unpetrify-ref: baserock/morph
 - name: trove-setup
   morph: strata/trove/trove-setup.morph
-  repo: baserock:baserock/trove-setup
-  ref: 16de74536e0846ba1d2e5101618df9146c785a41
-  unpetrify-ref: master
+  repo: https://github.com/perryl/trove-setup.git
+  ref: a9304f2cd222351a90a6f9e636de3a1c2fbad81a
+  unpetrify-ref: lauren/hyperlink-filter
 - name: lua-scrypt
   morph: strata/trove/lua-scrypt.morph
   repo: upstream:lua-scrypt
